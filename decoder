@@ -1,0 +1,10 @@
+# define the dictionary
+encoder = {"a":"1", "b":"2", "c":"3", "d":"4", "e":"5"}
+
+# take your input
+Letter1 = raw_input ("Please input the first letter of the word: ")
+Letter2 = raw_input ("Please input the first letter of the word: ")
+Letter3 = raw_input ("Please input the first letter of the word: ")
+
+# print out the encoded version
+print encoder[Letter1] + encoder[Letter2] + encoder[Letter3]
