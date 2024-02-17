@@ -1,0 +1,32 @@
+import math
+import random
+from random import randint
+
+#Taking inputs
+lower_bound= int(input("Choose lowerbound: "))
+print("OK! lowerbound is "+str(lower_bound)+".")
+upper_bound= int(input("Choose upperbound: "))
+print("OK! upperbound is "+str(upper_bound)+".")
+ 
+#Getting random number
+the_number = random.randint(lower_bound, upper_bound)
+
+#Showing the chances
+chances=round(math.log(upper_bound - lower_bound + 1, 2))
+print("you have " +str(chances)+" chances for finding the number")
+
+#Gueesing part
+count=0
+while count<chances:
+    count=count+1
+    guess= int(input("Guess the number:"))
+    if guess is the_number:
+              print("Congrats, score is " + str(count))
+              break
+    elif guess<the_number:
+              print("too small")
+    elif guess>the_number:
+              print("too high")
+
+if guess is not the_number:
+    print("Try again!, The true number was " +str(the_number))    
